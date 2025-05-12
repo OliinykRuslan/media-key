@@ -343,7 +343,7 @@ body {
 .hero {
     background-image: url('../img/hero-bg.gif');
     background-size: cover;
-    background-position: 50%;
+    background-position: 50% 0;
     padding: 215px 0 87px;
 }
 .hero-wrap {
@@ -1120,6 +1120,9 @@ body {
 .standart-card,
 .standart-card .card-price-top {
     background-color: #1E1E1E;
+}
+.standart-card .card-price-wrap {
+    background-color: var(--dark-gray);
 }
 .vip-card .card-price-wrap {
     background: #f24e1e;
