@@ -472,6 +472,7 @@ body {
 }
 .action-section {
     background-image: url('../img/action-bg.gif');
+    background-position: 50% 0;
     background-size: cover;
     padding: 50px 0;
     color: var(--white);
@@ -543,6 +544,7 @@ body {
 .form-wrap .form-col {
     padding: 20px 0 0 8px;
     width: 60%;
+    position: relative;
 }
 .form-wrap .form {
     display: grid;
@@ -553,6 +555,22 @@ body {
     border: 1px solid var(--gray);
     padding: 13px;
     width: 100%;
+}
+.success-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .75);
+    font-weight: 700;
+    display: none;
+}
+.success-msg.active {
+    display: flex;
 }
 .error-message {
     color: #ff0000;
@@ -918,6 +936,7 @@ body {
 }
 .goal-section {
     background-image: url('../img/goal-bg.gif');
+    background-position: 50% 0;
     background-size: cover;
     color: var(--white);
     padding: 255px 0 73px;
