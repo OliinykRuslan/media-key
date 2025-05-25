@@ -48,57 +48,9 @@
         });
     }
 
-    // validation
-    var ajaxContactForm = function() {
-        $('#contactform').each(function() {
-            $(this).validate({
-                submitHandler: function(form) {
-                    var $form = $(form),
-                        str = $form.serialize(),
-                        loading = $('<div />', { 'class': 'loading' });
-
-                    $.ajax({
-                        type: "POST",
-                        url: $form.attr('action'),
-                        data: str,
-                        beforeSend: function() {
-                            $form.find('.form-submit').append(loading);
-                        },
-                        success: function(msg) {
-                            var result, cls;
-                            if (msg === 'Success') {
-                                result = 'Message Sent Successfully To Email Administrator. ( You can change the email management a very easy way to get the message of customers in the user manual )';
-                                cls = 'msg-success';
-                            } else {
-                                result = 'Error sending email.';
-                                cls = 'msg-error';
-                            }
-
-                            $form.prepend(
-                                $('<div />', {
-                                    'class': 'flat-alert ' + cls,
-                                    'text': result
-                                }).append(
-                                    $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
-                                )
-                            );
-
-                            $form.find(':input').not('.submit').val('');
-                        },
-                        complete: function(xhr, status, error_thrown) {
-                            $form.find('.loading').remove();
-                        }
-                    });
-                }
-            });
-        }); // each contactform
-    };
-
-
     // Dom Ready
     $(function() {
         scrollToTop();
-        ajaxContactForm();
     });
 })(jQuery);
 
@@ -284,7 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
     // form validate
     const forms = document.querySelectorAll('form.form');
   
@@ -336,12 +287,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // Якщо форма валідна, надсилаємо дані
+            //is valid form
             if (isValid) {
-                // Тут можна додати функціонал для відправки форми
-                alert('Форма успішно відправлена!');
                 form.reset();
+
+                const successMsgElements = document.querySelectorAll('.success-msg');
+                if (successMsgElements.length > 0) {
+                    successMsgElements.forEach(element => {
+                        element.classList.add('active');
+                        
+                        setTimeout(() => {
+                            element.classList.remove('active');
+                        }, 5000);
+                    });
+                } else {
+                    console.error("Success message element not found");
+                }
             }
+
         });
     
         // Додаємо обробники події для очищення повідомлення про помилку при вводі
