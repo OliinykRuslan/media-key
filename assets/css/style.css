@@ -88,6 +88,7 @@ a {
     background-color: transparent;
     border: 1px solid var(--dark-gray);
     color: var(--dark-gray);
+    cursor: pointer;
     padding: 12px 32px;
     border-radius: 30px;
     text-transform: uppercase;
@@ -927,7 +928,7 @@ body {
     margin: 0 0 33px;
 }
 .cases-section .swiper-slide {
-    opacity: 0.3;
+    /* opacity: 0.3; */
 }
 .cases-section .swiper-slide-active,
 .cases-section .swiper-slide-next,
@@ -1748,7 +1749,7 @@ a.f-email {
     }
     .for-whom-section .title {
         font-size: 16px;
-        margin: 0 auto 93px;
+        margin: 0 auto 50px;
     }
     .for-whom-video {
         height: 380px;
@@ -1973,7 +1974,7 @@ a.f-email {
     .for-whom-video,
     .how-section .video,
     .more-about-section .video {
-        height: 180px;
+        height: 225px;
     }
     .representatives-section .img-list {
         justify-content: flex-start;
