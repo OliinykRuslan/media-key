@@ -11,25 +11,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Media Key</title>
 </head>
-<body>
+<body class="ua">
     <div class="wrapper">
         <header class="header">
             <div class="header-wrap">
                 <a href="/" class="logo">
-                    <img src="../assets/img/logo.svg" alt="Медіа-Ключ">
+                    <img src="./assets/img/logo.svg" alt="Медіа-Ключ">
                 </a>
                 <div class="header-nav">
                     <a href="/" class="logo-responsive">
-                        <img src="../assets/img/logo.svg" alt="Медіа-Ключ">
+                        <img src="./assets/img/logo.svg" alt="Медіа-Ключ">
                     </a>
                     <ul class="lang-list">
                         <li><a href="#">Ua</a></li>
-                        <li><a href="../en/index.html">En</a></li>
-                        <li><a href="../ru/index.html">Ru</a></li>
+                        <li><a href="./en/">En</a></li>
+                        <li><a href="./ru/">Ru</a></li>
                     </ul>
                     <ul class="main-nav">
                         <li class="nav-item">
@@ -55,10 +55,10 @@
                         </div>
                         <div class="dropdown-content">
                             <div class="dropdown-option" data-lang="EN">
-                                <a href="../en/index.html">EN</a>
+                                <a href="./en/">EN</a>
                             </div>
                             <div class="dropdown-option" data-lang="ru">
-                                <a href="../ru/index.html">RU</a>
+                                <a href="./ru/">RU</a>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
             <div class="container">
                 <h4 class="title">Навчитися перетворювати хаос на нові можливості. Створювати сильні команди та доводити проєкти до результату. Знаходити опору в хаосі та досягати поставлених цілей.</h4>
                 <div class="video-wrap">
-                    <iframe width="500" height="621" src="https://www.youtube.com/embed/tgbNymZ7vqY" class="for-whom-video"></iframe>
+                    <iframe class="for-whom-video" width="1296" height="729" src="https://www.youtube.com/embed/F1X3jJwgpbo" title="Як бізнесу зростати й процвітати в хаосі? Відгуки учасників ігор «Медіа-Ключ»." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="col-title-wrap" id="for-whom-anchor">
                     <p class="col-title text-large text-bold text-white">ДЛЯ КОГО <span class="block">ГРА?</span></p>
@@ -154,18 +154,18 @@
                         <p class="cta-text">Запишись на консультацію</p>
                     </div>
                     <div class="form-col">
-                        <form class="form font-wix" action="../contact/contact-process.php" method="post" accept-charset="utf-8">
+                        <form class="form font-wix" method="post" accept-charset="utf-8">
                             <div>
-                                <input type="text" placeholder="Ім'я" tabindex="1" id="name" name="name" value="">
+                                <input type="text" placeholder="Ім'я" tabindex="1" name="name" value="" required>
                             </div>
                             <div>
-                                <input type="text" placeholder="Телефон" tabindex="2" id="phone" name="phone" value="">
+                                <input type="text" placeholder="Телефон" tabindex="2" name="phone" value="" required>
                             </div>
                             <div>
-                                <input type="text" placeholder="Імейл" tabindex="3" id="email" name="email" value="">
+                                <input type="email" placeholder="Імейл" tabindex="3" name="email" value="" required>
                             </div>
                             <div>
-                                <button type="submit" class="btn-transparent" id="submit" name="submit">Записатись</button>
+                                <button type="submit" class="btn-transparent" name="submit">Записатись</button>
                             </div>
                             <div class="success-msg">
                                 <p>Форма успішно відправлена!</p>
@@ -237,35 +237,42 @@
                               <div class="swiper-slide">
                                 <div class="slide-content">
                                   <div class="slide-placeholder">
-                                    <iframe width="478" height="849" src="https://www.youtube.com/embed/eKgAg8K6RZE" title="Розвиток через гру: як працювати з невідомим. Сергій Козлов, виконавчий директор Romexsoft" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe class="review-video" width="478" height="849" src="https://www.youtube.com/embed/tTveP9hLG-I" title="Безпечне середовище для складних рішень. Чому гра — обовʼязкова для керівника. Вʼячеслав Кунев" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                   </div>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="slide-content">
                                   <div class="slide-placeholder">
-                                    123
+                                    <iframe class="review-video" width="907" height="510" src="https://www.youtube.com/embed/nRH1H92_ZGo" title="Як ігри допомогли вирости в 5 напрямках. Навіщо їхати на гру? Катерина Папанага" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                   </div>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="slide-content">
                                   <div class="slide-placeholder">
-                                    123
+                                    <iframe class="review-video" width="478" height="849" src="https://www.youtube.com/embed/YO6-WxBCNGA" title="Як гра підсилила продажі та пришвидшила онбординг команди.Сергій Козлов" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                   </div>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="slide-content">
                                   <div class="slide-placeholder">
-                                    123
+                                    <iframe class="review-video" width="354" height="630" src="https://www.youtube.com/embed/0YyC-snsUCE" title="Як вести кілька проєктів і не згоріти. Дмитро Шаповалов" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                   </div>
                                 </div>
                               </div>
                               <div class="swiper-slide">
                                 <div class="slide-content">
                                   <div class="slide-placeholder">
-                                    123
+                                    <iframe class="review-video" width="354" height="630" src="https://www.youtube.com/embed/KTaRAc9qxZw" title="Коли межі зникають: як гра допомагає зростати і проривати шаблони. Костянтин Черановський." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="slide-content">
+                                  <div class="slide-placeholder">
+                                    <iframe class="review-video" width="354" height="630" src="https://www.youtube.com/embed/p7jy0klOalU" title="Я став керівником і не знав, що далі. Гра допомогла знайти відповіді. Олександр Чендеков" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                   </div>
                                 </div>
                               </div>
@@ -285,82 +292,82 @@
                 <div class="swiper-container why-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide1.jpg" alt="slide1">
+                            <img src="./assets/img/slides/slide1.jpg" alt="slide1">
                         </div>
                          <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide2.jpg" alt="slide2">
+                            <img src="./assets/img/slides/slide2.jpg" alt="slide2">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide3.jpg" alt="slide3">
+                            <img src="./assets/img/slides/slide3.jpg" alt="slide3">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide4.jpg" alt="slide4">
+                            <img src="./assets/img/slides/slide4.jpg" alt="slide4">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide5.jpg" alt="slide5">
+                            <img src="./assets/img/slides/slide5.jpg" alt="slide5">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide6.jpg" alt="slide6">
+                            <img src="./assets/img/slides/slide6.jpg" alt="slide6">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide7.jpg" alt="slide7">
+                            <img src="./assets/img/slides/slide7.jpg" alt="slide7">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide8.jpg" alt="slide8">
+                            <img src="./assets/img/slides/slide8.jpg" alt="slide8">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide9.jpg" alt="slide9">
+                            <img src="./assets/img/slides/slide9.jpg" alt="slide9">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide10.jpg" alt="slide10">
+                            <img src="./assets/img/slides/slide10.jpg" alt="slide10">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide11.jpg" alt="slide11">
+                            <img src="./assets/img/slides/slide11.jpg" alt="slide11">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide12.jpg" alt="slide12">
+                            <img src="./assets/img/slides/slide12.jpg" alt="slide12">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide13.jpg" alt="slide13">
+                            <img src="./assets/img/slides/slide13.jpg" alt="slide13">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide14.jpg" alt="slide14">
+                            <img src="./assets/img/slides/slide14.jpg" alt="slide14">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide15.jpg" alt="slide15">
+                            <img src="./assets/img/slides/slide15.jpg" alt="slide15">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide16.jpg" alt="slide16">
+                            <img src="./assets/img/slides/slide16.jpg" alt="slide16">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide17.jpg" alt="slide17">
+                            <img src="./assets/img/slides/slide17.jpg" alt="slide17">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide18.jpg" alt="slide18">
+                            <img src="./assets/img/slides/slide18.jpg" alt="slide18">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide19.jpg" alt="slide19">
+                            <img src="./assets/img/slides/slide19.jpg" alt="slide19">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide20.jpg" alt="slide20">
+                            <img src="./assets/img/slides/slide20.jpg" alt="slide20">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide21.jpg" alt="slide21">
+                            <img src="./assets/img/slides/slide21.jpg" alt="slide21">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide22.jpg" alt="slide22">
+                            <img src="./assets/img/slides/slide22.jpg" alt="slide22">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide23.jpg" alt="slide23">
+                            <img src="./assets/img/slides/slide23.jpg" alt="slide23">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide24.jpg" alt="slide24">
+                            <img src="./assets/img/slides/slide24.jpg" alt="slide24">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide25.jpg" alt="slide25">
+                            <img src="./assets/img/slides/slide25.jpg" alt="slide25">
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/slides/slide26.jpg" alt="slide26">
+                            <img src="./assets/img/slides/slide26.jpg" alt="slide26">
                         </div>
                     </div>
                 </div>
@@ -396,7 +403,8 @@
                 </div>
                 <div class="row-main">
                     <div class="video-wrap">
-                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" class="video"></iframe>
+                        <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+                        <iframe class="video" width="354" height="630" src="https://www.youtube.com/embed/tTveP9hLG-I" title="Безпечне середовище для складних рішень. Чому гра — обовʼязкова для керівника. Вʼячеслав Кунев" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="text-wrap">
                         <h4 class="col-title">Рефлексивна гра триває 3,5 дні.
@@ -443,17 +451,17 @@
             <div class="container">
                 <h3 class="title">Представники цих компаній <span class="text-bold block">вже були в грі</span></h3>
                 <div class="img-list">
-                    <img src="../assets/img/dim.png" alt="dim">
-                    <img src="../assets/img/rud.png" alt="rud">
-                    <img src="../assets/img/udp.png" alt="udp">
-                    <img src="../assets/img/archimatika.png" alt="archimatika">
-                    <img src="../assets/img/exist.svg" alt="exist">
+                    <img src="./assets/img/dim.png" alt="dim">
+                    <img src="./assets/img/rud.png" alt="rud">
+                    <img src="./assets/img/udp.png" alt="udp">
+                    <img src="./assets/img/archimatika.png" alt="archimatika">
+                    <img src="./assets/img/exist.svg" alt="exist">
                     <div class="img-divider"></div>
-                    <img src="../assets/img/pozitiva.png" alt="pozitiva">
-                    <img src="../assets/img/resolute.png" alt="resolute">
-                    <img src="../assets/img/food-market.png" alt="food-market">
-                    <img src="../assets/img/16-9.jpg" alt="16-9">
-                    <img src="../assets/img/vintage.jpeg" alt="vintage">
+                    <img src="./assets/img/pozitiva.png" alt="pozitiva">
+                    <img src="./assets/img/resolute.png" alt="resolute">
+                    <img src="./assets/img/food-market.png" alt="food-market">
+                    <img src="./assets/img/16-9.jpg" alt="16-9">
+                    <img src="./assets/img/vintage.jpeg" alt="vintage">
                 </div>
             </div>
         </section>
@@ -466,51 +474,42 @@
                 <div class="swiper-container cases-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="tgbNymZ7vqY"> 
-                                <img src="../assets/img/case-holder.png" alt="slide1">
+                            <div class="thumbnail-wrapper" data-video-id="YzZrCJ9GKQ0"> 
+                                <img src="./assets/img/case-holder.png" alt="slide1">
                                 <button class="play-button">
                                     <span class="play-icon"></span>
                                 </button>
                             </div>
                             <div class="text-holder">
-                                <p>Досягнення амбітної цілі під час гри.</p>
-                                <a href="#" class="btn-slide">дивитися</a>
+                                <p>Від 1 до 50 мегават: стратегія, команда, результат. Що дала нам рефлексивна гра?</p> 
+                                <p>Владислав Папанага</p>
+                                <span class="btn-slide">дивитися</span>
                             </div>
                         </div>
                          <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="tgbNymZ7vqY"> 
-                                <img src="../assets/img/case-holder.png" alt="slide2">
+                            <div class="thumbnail-wrapper" data-video-id="cUMIAqdrors"> 
+                                <img src="./assets/img/case-holder.png" alt="slide2">
                                 <button class="play-button">
                                     <span class="play-icon"></span>
                                 </button>
                             </div>
                             <div class="text-holder">
-                                <p>Побудова автономної компанії.</p>
-                                <a href="#" class="btn-slide">дивитися</a>
+                                <p>Створення автономної організації великого масштабу з нуля.</p>
+                                <p>Андрій Сорока</p>
+                                <span class="btn-slide">дивитися</span>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="tgbNymZ7vqY"> 
-                                <img src="../assets/img/case-holder.png" alt="slide3">
+                            <div class="thumbnail-wrapper" data-video-id="idOetMn8h1E"> 
+                                <img src="./assets/img/case-holder.png" alt="slide3">
                                 <button class="play-button">
                                     <span class="play-icon"></span>
                                 </button>
                             </div>
                             <div class="text-holder">
-                                <p>Залучення ключових людей до бізнесу.</p>
-                                <a href="#" class="btn-slide">дивитися</a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="tgbNymZ7vqY"> 
-                                <img src="../assets/img/case-holder.png" alt="slide4">
-                                <button class="play-button">
-                                    <span class="play-icon"></span>
-                                </button>
-                            </div>
-                            <div class="text-holder">
-                                <p>Досягнення амбітної цілі під час гри.</p>
-                                <a href="#" class="btn-slide">дивитися</a>
+                                <p>Як залучити команду до цілей компанії — і перестати тягнути все на собі.</p>
+                                <p>Руслан Поверга</p>
+                                <span class="btn-slide">дивитися</span>
                             </div>
                         </div>
                     </div>
@@ -547,18 +546,18 @@
                         <p class="cta-text">Запишись на консультацію</p>
                     </div>
                     <div class="form-col">
-                        <form class="form font-wix" action="../contact/contact-process.php" method="post" accept-charset="utf-8">
+                        <form class="form font-wix" method="post" accept-charset="utf-8">
                             <div>
-                                <input type="text" placeholder="Ім'я" tabindex="1" id="name" name="name" value="">
+                                <input type="text" placeholder="Ім'я" tabindex="1" name="name" value="" required>
                             </div>
                             <div>
-                                <input type="text" placeholder="Телефон" tabindex="2" id="phone" name="phone" value="">
+                                <input type="text" placeholder="Телефон" tabindex="2" name="phone" value="" required>
                             </div>
                             <div>
-                                <input type="text" placeholder="Імейл" tabindex="3" id="email" name="email" value="">
+                                <input type="email" placeholder="Імейл" tabindex="3" name="email" value="" required>
                             </div>
                             <div>
-                                <button type="submit" class="btn-transparent" id="submit" name="submit">Записатись</button>
+                                <button type="submit" class="btn-transparent" name="submit">Записатись</button>
                             </div>
                             <div class="success-msg">
                                 <p>Форма успішно відправлена!</p>
@@ -661,47 +660,47 @@
                 <h3 class="title">НАША КОМАНДА</h3>
                 <div class="team-wrap">
                     <div class="team-item">
-                        <img src="../assets/img/our-team/oleksandr-budantsov2.jpg" alt="Oleksandr Budantsov">
+                        <img src="./assets/img/our-team/oleksandr-budantsov2.jpg" alt="Oleksandr Budantsov">
                         <h4 class="item-title">Олександр Буданцов</h4>
                         <p class="item-subtitle">Директор компанії «Медіа-Ключ»</p>
                     </div>
                     <div class="team-item right-position">
-                        <img src="../assets/img/our-team/tatyana-budantsova2.jpg" alt="Tatyana Budantsova">
+                        <img src="./assets/img/our-team/tatyana-budantsova2.jpg" alt="Tatyana Budantsova">
                         <h4 class="item-title">Тетяна Буданцова</h4>
                         <p class="item-subtitle">Заступник директора компанії «Медіа-Ключ»</p>
                     </div>
                     <div class="team-item">
-                        <img src="../assets/img/our-team/natalia-teslia.jpg" alt="Natalia Teslia">
+                        <img src="./assets/img/our-team/natalia-teslia.jpg" alt="Natalia Teslia">
                         <h4 class="item-title">Наталія Тесля</h4>
                         <p class="item-subtitle"></p>
                     </div>
                     <div class="team-item">
-                        <img src="../assets/img/our-team/olga-mashtaler.jpg" alt="olga-mashtaler">
+                        <img src="./assets/img/our-team/olga-mashtaler.jpg" alt="olga-mashtaler">
                         <h4 class="item-title">Ольга Машталер</h4>
                         <p class="item-subtitle"></p>
                     </div>
                     <div class="team-item top-position">
-                        <img src="../assets/img/our-team/vadim-azizov.jpg" alt="Vadim Azizov">
+                        <img src="./assets/img/our-team/vadim-azizov.jpg" alt="Vadim Azizov">
                         <h4 class="item-title">Вадим Азізов</h4>
                         <p class="item-subtitle"></p>
                     </div>
                     <div class="team-item">
-                        <img src="../assets/img/our-team/evelina-rudaya.jpg" alt="Evelina Rudaya">
+                        <img src="./assets/img/our-team/evelina-rudaya.jpg" alt="Evelina Rudaya">
                         <h4 class="item-title">Евеліна Рудая</h4>
                         <p class="item-subtitle"></p>
                     </div>
                     <div class="team-item">
-                        <img src="../assets/img/our-team/alexander-nikulin.jpg" alt="Alexander Nikulin">
+                        <img src="./assets/img/our-team/alexander-nikulin.jpg" alt="Alexander Nikulin">
                         <h4 class="item-title">Олександр Нікулін</h4>
                         <p class="item-subtitle"></p>
                     </div>
                     <div class="team-item">
-                        <img src="../assets/img/our-team/kateryna-kravchuk.jpg" alt="Kateryna Kravchuk">
+                        <img src="./assets/img/our-team/kateryna-kravchuk.jpg" alt="Kateryna Kravchuk">
                         <h4 class="item-title">Катерина Кравчук</h4>
                         <p class="item-subtitle"></p>
                     </div>
                     <div class="team-item">
-                        <img src="../assets/img/our-team/mykyta-kazmiruk.jpg" alt="Mykyta Kazmiruk">
+                        <img src="./assets/img/our-team/mykyta-kazmiruk.jpg" alt="Mykyta Kazmiruk">
                         <h4 class="item-title">Микита Казмірук</h4>
                         <p class="item-subtitle"></p>
                     </div>
@@ -718,7 +717,7 @@
                             <p class="pricing-cta-text">
                                 Перейдіть на новий рівень управління бізнесом, проектом та життям.
                             </p>
-                            <a href="#" class="btn">PLAY THE GAME</a>
+                            <a href="#form-anchor" class="btn">PLAY THE GAME</a>
                         </div>
                     </div>
                     <div class="pricing-cards">
@@ -811,7 +810,7 @@
                 <div class="more-about-wrap">
                     <h2 class="title">ДЛЯ ТИХ, КОМУ ХОЧЕТЬСЯ ДІЗНАТИСЯ БІЛЬШЕ ПРО ГРУ:</h2>
                     <div class="video-wrap">
-                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" class="video"></iframe>
+                        <iframe class="video" width="907" height="510" src="https://www.youtube.com/embed/F1X3jJwgpbo" title="Як бізнесу зростати й процвітати в хаосі? Відгуки учасників ігор «Медіа-Ключ»." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -822,7 +821,7 @@
                 <div class="footer-wrap">
                     <div class="l-col">
                         <a href="/" class="logo">
-                            <img src="../assets/img/logo-primary.svg" alt="Медіа-Ключ">
+                            <img src="./assets/img/logo-primary.svg" alt="Медіа-Ключ">
                         </a>
                         <h3 class="f-title">КОНТАКТИ</h3>
                         <div class="f-legal">
@@ -882,7 +881,148 @@
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // form validate
+            const forms = document.querySelectorAll('form.form');
+        
+            forms.forEach(function(form) {
+                const nameInput = form.querySelector('input[name="name"]');
+                const phoneInput = form.querySelector('input[name="phone"]');
+                const emailInput = form.querySelector('input[name="email"]');
+                const submitButton = form.querySelector('button[type="submit"]');
+            
+                // Перевіряємо наявність всіх необхідних елементів
+                if (!nameInput || !phoneInput || !emailInput || !submitButton) {
+                    console.error('Форма не містить всіх необхідних елементів', form);
+                    return; // Пропускаємо цю форму і переходимо до наступної
+                }
+            
+                // Додаємо обробник події для кнопки відправки
+                submitButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Скидаємо помилки перед кожною перевіркою
+                    clearErrors(form);
+                    
+                    // Перевіряємо валідність всіх полів
+                    let isValid = true;
+                    
+                    // Перевірка імені - не може бути порожнім
+                    if (!nameInput.value.trim()) {
+                        showError(nameInput, 'Будь ласка, введіть ваше ім\'я');
+                        isValid = false;
+                    }
+                    
+                    // Перевірка телефону - український формат (приклад: +380501234567)
+                    // const phoneRegex = /^\+?3?8?(0\d{9})$/;
+                    const phoneRegex = /^\s*\d*[\.\,]?\d*\s*$/;
+                    if (!phoneInput.value.trim()) {
+                        showError(phoneInput, 'Будь ласка, введіть ваш номер телефону');
+                        isValid = false;
+                    } else if (!phoneRegex.test(phoneInput.value.trim())) {
+                        showError(phoneInput, 'Введіть правильний формат телефону');
+                        isValid = false;
+                    }
+                    
+                    // Перевірка електронної пошти
+                    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    if (!emailInput.value.trim()) {
+                        showError(emailInput, 'Будь ласка, введіть вашу електронну пошту');
+                        isValid = false;
+                    } else if (!emailRegex.test(emailInput.value.trim())) {
+                        showError(emailInput, 'Введіть правильний формат електронної пошти');
+                        isValid = false;
+                    }
+                    
+                    //is valid form
+                    if (isValid) {
+                        const successMsgElements = document.querySelectorAll('.success-msg');
+                        if (successMsgElements.length > 0) {
+                            successMsgElements.forEach(element => {
+                                element.classList.add('active');
+                                
+                                setTimeout(() => {
+                                    element.classList.remove('active');
+                                }, 10000);
+                            });
+                        } else {
+                            console.error("Success message element not found");
+                        }
+
+                        //send form to mail
+                        const formData = new FormData(form);
+                        fetch("/contact/contact-process.php", {
+                            method: "POST",
+                            body: formData
+                        })
+                        .then(response => response.text())
+                        .then(result => {
+                            if (result.includes("success")) {
+                                form.reset();
+                            } else {
+                                console.error("Помилка від сервера:", result);
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Помилка запиту:", error);
+                        });
+                    }
+
+                });
+            
+                // Додаємо обробники події для очищення повідомлення про помилку при вводі
+                const inputs = form.querySelectorAll('input');
+                inputs.forEach(function(input) {
+                    input.addEventListener('input', function() {
+                        const errorElement = input.parentElement.querySelector('.error-message');
+                        if (errorElement) {
+                            errorElement.remove();
+                            input.style.borderColor = '';
+                        }
+                    });
+                });
+            });
+        
+            // Функція для відображення помилки під полем
+            function showError(inputElement, message) {
+                // Перевіряємо, чи вже існує повідомлення про помилку
+                const parent = inputElement.parentElement;
+                let errorElement = parent.querySelector('.error-message');
+                
+                // Якщо елемент помилки не існує, створюємо його
+                if (!errorElement) {
+                    errorElement = document.createElement('span');
+                    errorElement.className = 'error-message';
+                    parent.appendChild(errorElement);
+                }
+                
+                // Додаємо червону рамку до поля з помилкою
+                inputElement.style.borderColor = 'red';
+
+                // Встановлюємо текст помилки
+                errorElement.textContent = message;
+            }
+        
+            // Функція для очищення всіх помилок у конкретній формі
+            function clearErrors(form) {
+                const errorMessages = form.querySelectorAll('.error-message');
+                errorMessages.forEach(function(element) {
+                    element.remove();
+                });
+                
+                // Відновлюємо стандартні стилі для полів
+                const inputs = form.querySelectorAll('input');
+                inputs.forEach(function(input) {
+                    input.style.borderColor = '';
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
