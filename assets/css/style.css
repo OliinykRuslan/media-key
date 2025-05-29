@@ -928,7 +928,7 @@ body {
     margin: 0 0 33px;
 }
 .cases-section .swiper-slide {
-    /* opacity: 0.3; */
+    opacity: 0.3;
 }
 .cases-section .swiper-slide-active,
 .cases-section .swiper-slide-next,
