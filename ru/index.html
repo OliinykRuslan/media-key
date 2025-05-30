@@ -474,11 +474,14 @@
                 <div class="swiper-container cases-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="pgUb50097LY">
+                            <!-- <div class="thumbnail-wrapper" data-video-id="pgUb50097LY">
                                 <img src="../assets/img/case-holder.png" alt="slide1">
                                 <button class="play-button playBtn">
                                     <span class="play-icon"></span>
                                 </button>
+                            </div> -->
+                            <div class="thumbnail-wrapper">
+                                <iframe class="video" width="354" height="630" src="https://www.youtube.com/embed/pgUb50097LY" title="С 1 до 50 мегаватт: стратегия, команда, результат.Что дала нам рефлексивная игра? Владислав Папанага" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div class="text-holder">
                                 <p>С 1 до 50 мегаватт: стратегия, команда, результат.
@@ -488,11 +491,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="uJDTyzEQzjY"> 
-                                <img src="../assets/img/case-holder.png" alt="slide2">
-                                <button class="play-button">
-                                    <span class="play-icon"></span>
-                                </button>
+                            <div class="thumbnail-wrapper"> 
+                                <iframe class="video" width="907" height="510" src="https://www.youtube.com/embed/uJDTyzEQzjY" title="Создание автономной организации большого масштаба с нуля. Андрей Сорока" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div class="text-holder">
                                 <p>Создание автономной организации большого масштаба с нуля.</p>
@@ -501,11 +501,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="0rc1lW7yt8Q"> 
-                                <img src="../assets/img/case-holder.png" alt="slide3">
-                                <button class="play-button">
-                                    <span class="play-icon"></span>
-                                </button>
+                            <div class="thumbnail-wrapper"> 
+                                <iframe class="video" width="354" height="630" src="https://www.youtube.com/embed/0rc1lW7yt8Q" title="Как вовлечь команду в цели компании — и перестать тянуть всё на себе. Руслан Поверга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div class="text-holder">
                                 <p>Как вовлечь команду в цели компании — и перестать тянуть всё на себе.</p>
@@ -912,13 +909,13 @@
                         showError(nameInput, 'Пожалуйста, введите ваше имя');
                         isValid = false;
                     }
-                    
-                    const phoneRegex = /^\+?3?8?(0\d{9})$/;
+
+                    const phoneRegex = /^[\d\+\-\s]+$/;
                     if (!phoneInput.value.trim()) {
-                        showError(phoneInput, 'Пожалуйста, введите номер телефона');
+                        showError(phoneInput, 'Будь ласка, введіть ваш номер телефону');
                         isValid = false;
                     } else if (!phoneRegex.test(phoneInput.value.trim())) {
-                        showError(phoneInput, 'Введите правильный формат телефона (например, +380501234567)');
+                        showError(phoneInput, 'Введіть правильний формат телефону');
                         isValid = false;
                     }
                     
