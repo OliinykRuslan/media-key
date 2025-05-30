@@ -68,6 +68,12 @@
                 </div>
             </div>
 
+
+            <div class="mob-head-anchor">
+                <a href="#form-anchor" class="btn">ВЗЯТИ УЧАСТЬ</a>
+            </div>
+
+
             <div class="mobile-button">
             </div>
         </header>
@@ -474,11 +480,8 @@
                 <div class="swiper-container cases-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="YzZrCJ9GKQ0"> 
-                                <img src="./assets/img/case-holder.png" alt="slide1">
-                                <button class="play-button">
-                                    <span class="play-icon"></span>
-                                </button>
+                            <div class="thumbnail-wrapper">
+                                <iframe class="video" width="354" height="630" src="https://www.youtube.com/embed/YzZrCJ9GKQ0" title="Від 1 до 50 мегават: стратегія, команда, результат.Що дала нам рефлексивна гра?Владислав Папанага" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div class="text-holder">
                                 <p>Від 1 до 50 мегават: стратегія, команда, результат. Що дала нам рефлексивна гра?</p> 
@@ -486,12 +489,9 @@
                                 <span class="btn-slide">дивитися</span>
                             </div>
                         </div>
-                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="cUMIAqdrors"> 
-                                <img src="./assets/img/case-holder.png" alt="slide2">
-                                <button class="play-button">
-                                    <span class="play-icon"></span>
-                                </button>
+                        <div class="swiper-slide">
+                            <div class="thumbnail-wrapper"> 
+                                <iframe class="video" width="907" height="510" src="https://www.youtube.com/embed/cUMIAqdrors" title="Створення автономної організації великого масштабу з нуля. Андрій Сорока" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div class="text-holder">
                                 <p>Створення автономної організації великого масштабу з нуля.</p>
@@ -500,11 +500,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="thumbnail-wrapper" data-video-id="idOetMn8h1E"> 
-                                <img src="./assets/img/case-holder.png" alt="slide3">
-                                <button class="play-button">
-                                    <span class="play-icon"></span>
-                                </button>
+                            <div class="thumbnail-wrapper"> 
+                                <iframe class="video" width="354" height="630" src="https://www.youtube.com/embed/idOetMn8h1E" title="Як залучити команду до цілей компанії — і перестати тягнути все на собі. Руслан Поверга" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                             <div class="text-holder">
                                 <p>Як залучити команду до цілей компанії — і перестати тягнути все на собі.</p>
@@ -920,7 +917,7 @@
                     
                     // Перевірка телефону - український формат (приклад: +380501234567)
                     // const phoneRegex = /^\+?3?8?(0\d{9})$/;
-                    const phoneRegex = /^\s*\d*[\.\,]?\d*\s*$/;
+                    const phoneRegex = /^[\d\+\-\s]+$/;
                     if (!phoneInput.value.trim()) {
                         showError(phoneInput, 'Будь ласка, введіть ваш номер телефону');
                         isValid = false;
@@ -928,7 +925,7 @@
                         showError(phoneInput, 'Введіть правильний формат телефону');
                         isValid = false;
                     }
-                    
+
                     // Перевірка електронної пошти
                     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
                     if (!emailInput.value.trim()) {
