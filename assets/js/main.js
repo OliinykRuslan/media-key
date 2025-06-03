@@ -165,52 +165,97 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // play for cases-slider 
-    let currentActiveWrapper = null;
+    // let currentActiveWrapper = null;
 
-    function createThumbnailContent(wrapper) {
-        const originalImage = wrapper.getAttribute('data-original-image');
-        return `
-            <img src="${originalImage}" alt="Thumbnail">
-            <button class="play-button">
-                <div class="play-icon"></div>
-            </button>
-        `;
-    }
+    // function createThumbnailContent(wrapper) {
+    //     const originalImage = wrapper.getAttribute('data-original-image');
+    //     return `
+    //         <img src="${originalImage}" alt="Thumbnail">
+    //         <button class="play-button">
+    //             <div class="play-icon"></div>
+    //         </button>
+    //     `;
+    // }
 
-    function setupVideoWrapper(wrapper) {
-        const playButton = wrapper.querySelector('.play-button');
-        const img = wrapper.querySelector('img');
-        const videoId = wrapper.getAttribute('data-video-id');
+    // function setupVideoWrapper(wrapper) {
+    //     const playButton = wrapper.querySelector('.play-button');
+    //     const img = wrapper.querySelector('img');
+    //     const videoId = wrapper.getAttribute('data-video-id');
 
-        playButton.addEventListener('click', () => {
-            if (wrapper.classList.contains('playing')) return;
+    //     playButton.addEventListener('click', () => {
+    //         if (wrapper.classList.contains('playing')) return;
 
-            if (currentActiveWrapper && currentActiveWrapper !== wrapper) {
-                currentActiveWrapper.innerHTML = createThumbnailContent(currentActiveWrapper);
-                currentActiveWrapper.classList.remove('playing');
+    //         if (currentActiveWrapper && currentActiveWrapper !== wrapper) {
+    //             currentActiveWrapper.innerHTML = createThumbnailContent(currentActiveWrapper);
+    //             currentActiveWrapper.classList.remove('playing');
 
-                setupVideoWrapper(currentActiveWrapper);
-            }
+    //             setupVideoWrapper(currentActiveWrapper);
+    //         }
 
-            wrapper.setAttribute('data-original-image', img.src);
+    //         wrapper.setAttribute('data-original-image', img.src);
 
-            const iframe = document.createElement('iframe');
-            iframe.width = '100%';
-            iframe.height = '100%';
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            iframe.title = 'YouTube video player';
-            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-            iframe.allowFullscreen = true;
+    //         const iframe = document.createElement('iframe');
+    //         iframe.width = '100%';
+    //         iframe.height = '100%';
+    //         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    //         iframe.title = 'YouTube video player';
+    //         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    //         iframe.allowFullscreen = true;
 
-            wrapper.innerHTML = '';
-            wrapper.appendChild(iframe);
+    //         wrapper.innerHTML = '';
+    //         wrapper.appendChild(iframe);
             
-            wrapper.classList.add('playing');
-            currentActiveWrapper = wrapper;
-        });
-    }
+    //         wrapper.classList.add('playing');
+    //         currentActiveWrapper = wrapper;
+    //     });
+    // }
 
-    document.querySelectorAll('.thumbnail-wrapper').forEach(setupVideoWrapper);
+    // document.querySelectorAll('.cases-slider .swiper-slide').forEach(slide => {
+    //     const playButton = slide.querySelector('.play-button');
+    //     const slideButton = slide.querySelector('.btn-slide');
+
+    //     if (playButton && slideButton) {
+    //         slideButton.addEventListener('click', (e) => {
+    //             e.preventDefault();
+    //             playButton.click();
+    //         });
+    //     }
+    // });
+
+    // document.querySelectorAll('.thumbnail-wrapper').forEach(setupVideoWrapper);
+
+
+
+
+    const watchButtons = document.querySelectorAll('.btn-slide');
+    const videos = document.querySelectorAll('.thumbnail-wrapper iframe');
+    videos.forEach(video => {
+        let src = video.getAttribute('src');
+        video.setAttribute('data-src', src);
+        src = src.replace('autoplay=1', '');
+        if (src.includes('?')) {
+            src = src + '&mute=1&enablejsapi=1';
+        } else {
+            src = src + '?mute=1&enablejsapi=1';
+        }
+        video.setAttribute('src', src);
+    });
+
+    watchButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const slide = this.closest('.swiper-slide');
+            const iframe = slide.querySelector('iframe');
+            if (iframe) {
+                let src = iframe.getAttribute('data-src');
+                if (src.includes('?')) {
+                    src = src + '&autoplay=1';
+                } else {
+                    src = src + '?autoplay=1';
+                }
+                iframe.setAttribute('src', src);
+            }
+        });
+    });
     // End cases-slider
 
     // faq
@@ -233,127 +278,5 @@ document.addEventListener('DOMContentLoaded', function() {
             question.querySelector('.toggle-icon').textContent = '−';
         });
     });
-
-
-
-    // form validate
-    const forms = document.querySelectorAll('form.form');
-  
-    forms.forEach(function(form) {
-        const nameInput = form.querySelector('input[placeholder="Ім\'я"]');
-        const phoneInput = form.querySelector('input[placeholder="Телефон"]');
-        const emailInput = form.querySelector('input[placeholder="Імейл"]');
-        const submitButton = form.querySelector('button.btn-transparent');
-    
-        // Перевіряємо наявність всіх необхідних елементів
-        if (!nameInput || !phoneInput || !emailInput || !submitButton) {
-            console.error('Форма не містить всіх необхідних елементів', form);
-            return; // Пропускаємо цю форму і переходимо до наступної
-        }
-    
-        // Додаємо обробник події для кнопки відправки
-        submitButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Скидаємо помилки перед кожною перевіркою
-            clearErrors(form);
-            
-            // Перевіряємо валідність всіх полів
-            let isValid = true;
-            
-            // Перевірка імені - не може бути порожнім
-            if (!nameInput.value.trim()) {
-                showError(nameInput, 'Будь ласка, введіть ваше ім\'я');
-                isValid = false;
-            }
-            
-            // Перевірка телефону - український формат (приклад: +380501234567)
-            const phoneRegex = /^\+?3?8?(0\d{9})$/;
-            if (!phoneInput.value.trim()) {
-                showError(phoneInput, 'Будь ласка, введіть ваш номер телефону');
-                isValid = false;
-            } else if (!phoneRegex.test(phoneInput.value.trim())) {
-                showError(phoneInput, 'Введіть правильний формат телефону (наприклад, +380501234567)');
-                isValid = false;
-            }
-            
-            // Перевірка електронної пошти
-            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailInput.value.trim()) {
-                showError(emailInput, 'Будь ласка, введіть вашу електронну пошту');
-                isValid = false;
-            } else if (!emailRegex.test(emailInput.value.trim())) {
-                showError(emailInput, 'Введіть правильний формат електронної пошти');
-                isValid = false;
-            }
-            
-            //is valid form
-            if (isValid) {
-                form.reset();
-
-                const successMsgElements = document.querySelectorAll('.success-msg');
-                if (successMsgElements.length > 0) {
-                    successMsgElements.forEach(element => {
-                        element.classList.add('active');
-                        
-                        setTimeout(() => {
-                            element.classList.remove('active');
-                        }, 5000);
-                    });
-                } else {
-                    console.error("Success message element not found");
-                }
-            }
-
-        });
-    
-        // Додаємо обробники події для очищення повідомлення про помилку при вводі
-        const inputs = form.querySelectorAll('input');
-        inputs.forEach(function(input) {
-            input.addEventListener('input', function() {
-                const errorElement = input.parentElement.querySelector('.error-message');
-                if (errorElement) {
-                    errorElement.remove();
-                    input.style.borderColor = '';
-                }
-            });
-        });
-    });
-  
-    // Функція для відображення помилки під полем
-    function showError(inputElement, message) {
-        // Перевіряємо, чи вже існує повідомлення про помилку
-        const parent = inputElement.parentElement;
-        let errorElement = parent.querySelector('.error-message');
-        
-        // Якщо елемент помилки не існує, створюємо його
-        if (!errorElement) {
-            errorElement = document.createElement('span');
-            errorElement.className = 'error-message';
-            parent.appendChild(errorElement);
-        }
-        
-        // Додаємо червону рамку до поля з помилкою
-        inputElement.style.borderColor = 'red';
-
-        // Встановлюємо текст помилки
-        errorElement.textContent = message;
-    }
-  
-    // Функція для очищення всіх помилок у конкретній формі
-    function clearErrors(form) {
-        const errorMessages = form.querySelectorAll('.error-message');
-        errorMessages.forEach(function(element) {
-            element.remove();
-        });
-        
-        // Відновлюємо стандартні стилі для полів
-        const inputs = form.querySelectorAll('input');
-        inputs.forEach(function(input) {
-            input.style.borderColor = '';
-        });
-    }
-
-
 
 });
